@@ -594,7 +594,7 @@ public class ModelTemplate implements IJavaTemplate<ClientModel, JavaFile> {
                                     .format("%1$s = %2$s;", constantProperty.getName(), constantProperty.getDefaultValue()));
                         }
                     }
-                    for (ClientModelProperty requiredProperty : requiredProperties) {
+                    for (ClientModelProperty requiredProperty : requiredPropertiesIncludeMadeOptionalOn) {
                         constructor.line(String
                                 .format("this.%1$s = %2$s;", requiredProperty.getName(), requiredProperty.getName()));
                     }
